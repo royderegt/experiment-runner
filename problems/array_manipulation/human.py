@@ -32,7 +32,7 @@ def arrayManipulation(n, queries):
 
 if __name__ == '__main__':
     # Path to the input file
-    input_file_path = "arrayManipulation/input/large_input.txt"  # Update with your own file path
+    input_file_path = "../../input/array_manipulation.txt"  # Update with your own file path
     
     # Read the input file
     with open(input_file_path, 'r') as file:
