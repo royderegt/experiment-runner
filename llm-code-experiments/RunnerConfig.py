@@ -147,8 +147,10 @@ class RunnerConfig:
             'CPU_USAGE_5': df['CPU_USAGE_5'].mean(),
             'CPU_USAGE_6': df['CPU_USAGE_6'].mean(),
             'CPU_USAGE_7': df['CPU_USAGE_7'].mean(),
-            'TOTAL_MEMORY': df['TOTAL_MEMORY'].mean(),
-            'USED_MEMORY': df['USED_MEMORY'].mean()
+            'USED_MEMORY': df['USED_MEMORY'].mean(),
+            'USED_SWAP': df['USED_SWAP'].mean(),
+            'USED_MEMORY_MAX': df['USED_MEMORY'].max(),
+            'USED_SWAP_MAX': df['USED_SWAP'].max()
         }
         return run_data
 
