@@ -60,7 +60,7 @@ class RunnerConfig:
         """Create and return the run_table model here. A run_table is a List (rows) of tuples (columns),
         representing each run performed"""
         problem_factor = FactorModel("problem", ["fibonacci_modified", "closest_numbers", "array_manipulation",
-                                                 "hourglass_sum"])
+                                                 "hourglass_sum", "largest_rectangle", "median_array"])
         solution_factor = FactorModel("solution", ["human", "basic", "efficient"])
         self.run_table_model = RunTableModel(
             factors = [problem_factor, solution_factor],
