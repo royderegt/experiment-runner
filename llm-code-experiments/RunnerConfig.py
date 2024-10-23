@@ -60,7 +60,7 @@ class RunnerConfig:
         """Create and return the run_table model here. A run_table is a List (rows) of tuples (columns),
         representing each run performed"""
         problem_factor = FactorModel("problem", ["fibonacci_modified", "closest_numbers", "array_manipulation",
-                                                 "hourglass_sum"])
+                                                 "hourglass_sum", "largest_rectangle", "median_array"])
         solution_factor = FactorModel("solution", ["human", "basic", "efficient"])
         self.run_table_model = RunTableModel(
             factors = [problem_factor, solution_factor],
@@ -139,16 +139,28 @@ class RunnerConfig:
         run_data = {
             'Time': df['Time'].iloc[-1] - df['Time'].iloc[0],
             'PACKAGE_ENERGY': df['PACKAGE_ENERGY (J)'].iloc[-1] - df['PACKAGE_ENERGY (J)'].iloc[0],
-            'CPU_USAGE_0': df['CPU_USAGE_0'].mean(),
-            'CPU_USAGE_1': df['CPU_USAGE_1'].mean(),
-            'CPU_USAGE_2': df['CPU_USAGE_2'].mean(),
-            'CPU_USAGE_3': df['CPU_USAGE_3'].mean(),
-            'CPU_USAGE_4': df['CPU_USAGE_4'].mean(),
-            'CPU_USAGE_5': df['CPU_USAGE_5'].mean(),
-            'CPU_USAGE_6': df['CPU_USAGE_6'].mean(),
-            'CPU_USAGE_7': df['CPU_USAGE_7'].mean(),
-            'TOTAL_MEMORY': df['TOTAL_MEMORY'].mean(),
-            'USED_MEMORY': df['USED_MEMORY'].mean()
+            'CPU_USAGE_0_MEAN': df['CPU_USAGE_0'].mean(),
+            'CPU_USAGE_1_MEAN': df['CPU_USAGE_1'].mean(),
+            'CPU_USAGE_2_MEAN': df['CPU_USAGE_2'].mean(),
+            'CPU_USAGE_3_MEAN': df['CPU_USAGE_3'].mean(),
+            'CPU_USAGE_4_MEAN': df['CPU_USAGE_4'].mean(),
+            'CPU_USAGE_5_MEAN': df['CPU_USAGE_5'].mean(),
+            'CPU_USAGE_6_MEAN': df['CPU_USAGE_6'].mean(),
+            'CPU_USAGE_7_MEAN': df['CPU_USAGE_7'].mean(),
+            'CPU_USAGE_0_MEDIAN': df['CPU_USAGE_0'].median(),
+            'CPU_USAGE_1_MEDIAN': df['CPU_USAGE_1'].median(),
+            'CPU_USAGE_2_MEDIAN': df['CPU_USAGE_2'].median(),
+            'CPU_USAGE_3_MEDIAN': df['CPU_USAGE_3'].median(),
+            'CPU_USAGE_4_MEDIAN': df['CPU_USAGE_4'].median(),
+            'CPU_USAGE_5_MEDIAN': df['CPU_USAGE_5'].median(),
+            'CPU_USAGE_6_MEDIAN': df['CPU_USAGE_6'].median(),
+            'CPU_USAGE_7_MEDIAN': df['CPU_USAGE_7'].median(),
+            'USED_MEMORY_MEAN': df['USED_MEMORY'].mean(),
+            'USED_SWAP_MEAN': df['USED_SWAP'].mean(),
+            'USED_MEMORY_MEDIAN': df['USED_MEMORY'].median(),
+            'USED_SWAP_MEDIAN': df['USED_SWAP'].median(),
+            'USED_MEMORY_MAX': df['USED_MEMORY'].max(),
+            'USED_SWAP_MAX': df['USED_SWAP'].max()
         }
         return run_data
 

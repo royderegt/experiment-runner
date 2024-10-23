@@ -24,7 +24,7 @@ def main():
     return prs
 
 if __name__ == '__main__':
-    output_file_path = "closestNumber/output/output.txt"  # path
+    output_file_path = "../../input/closest_number.txt"  # path
     fptr = open(output_file_path, 'w')
     result = main()
     #fptr.write(' '.join(map(str, result)))

@@ -29,8 +29,8 @@ def hourglassSum(board):
     return max_sum
 
 if __name__ == '__main__':
-    input_file_path = "2D_Array/input/large_input.txt"  # input file path
-    output_file_path = "2D_Array/output/large_output.txt"  # Path for the output file
+    input_file_path = "../../input/2d_array.txt"  # input file path
+    # output_file_path = "2D_Array/output/large_output.txt"  # Path for the output file
 
     # Read the input file and construct the matrix
     board = []
@@ -41,6 +41,6 @@ if __name__ == '__main__':
     # Call the hourglassSum function to get the result
     result = hourglassSum(board)
 
-    # Write the result to the output file
-    with open(output_file_path, 'w') as fptr:
-        fptr.write(str(result) + '\n')
+    # # Write the result to the output file
+    # with open(output_file_path, 'w') as fptr:
+    #     fptr.write(str(result) + '\n')
