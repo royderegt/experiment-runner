@@ -16,7 +16,7 @@ def hourglassSum(arr):
     return max_sum
 
 if __name__ == "__main__":
-    with open('../../input/2d_array.txt', 'r') as file:
+    with open('/home/roy/Projects/greenlab/experiment-runner/input/2d_array.txt', 'r') as file:
         arr = []
         for line in file:
             row = list(map(int, line.strip().split()))

@@ -35,7 +35,7 @@ def largestRectangle(h):
     return max_area
 
 if __name__ == '__main__':
-    with open('../../input/largest_rectangle.txt', 'r') as file:
+    with open('/home/roy/Projects/greenlab/experiment-runner/input/largest_rectangle.txt', 'r') as file:
         n = int(file.readline().strip())
         heights = list(map(int, file.readline().strip().split()))
         

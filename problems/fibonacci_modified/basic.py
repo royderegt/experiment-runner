@@ -23,7 +23,7 @@ def fibonacciModified(t1, t2, n):
     return fib_sequence[n-1]
 
 if __name__ == "__main__":
-    with open('../../input/fibonacci.txt', 'r') as file:
+    with open('/home/roy/Projects/greenlab/experiment-runner/input/fibonacci.txt', 'r') as file:
         t1, t2, n = map(int, file.readline().split())
 
     fibonacciModified(t1, t2, n)
