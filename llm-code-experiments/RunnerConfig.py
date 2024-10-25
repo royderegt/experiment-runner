@@ -64,8 +64,15 @@ class RunnerConfig:
         solution_factor = FactorModel("solution", ["human", "basic", "efficient"])
         self.run_table_model = RunTableModel(
             factors = [problem_factor, solution_factor],
-            data_columns=['Time', 'PACKAGE_ENERGY', 'CPU_USAGE_0', 'CPU_USAGE_1', 'CPU_USAGE_2', 'CPU_USAGE_3',
-                          'CPU_USAGE_4', 'CPU_USAGE_5', 'CPU_USAGE_6', 'CPU_USAGE_7', 'TOTAL_MEMORY', 'USED_MEMORY'],
+            data_columns=[
+                'Time', 'PACKAGE_ENERGY', 'CPU_USAGE_0_MEAN', 'CPU_USAGE_1_MEAN', 'CPU_USAGE_2_MEAN',
+                'CPU_USAGE_3_MEAN',
+                'CPU_USAGE_4_MEAN', 'CPU_USAGE_5_MEAN', 'CPU_USAGE_6_MEAN', 'CPU_USAGE_7_MEAN', 'CPU_USAGE_0_MEDIAN',
+                'CPU_USAGE_1_MEDIAN', 'CPU_USAGE_2_MEDIAN', 'CPU_USAGE_3_MEDIAN', 'CPU_USAGE_4_MEDIAN',
+                'CPU_USAGE_5_MEDIAN',
+                'CPU_USAGE_6_MEDIAN', 'CPU_USAGE_7_MEDIAN', 'USED_MEMORY_MEAN', 'USED_SWAP_MEAN', 'USED_MEMORY_MEDIAN',
+                'USED_SWAP_MEDIAN', 'USED_MEMORY_MAX', 'USED_SWAP_MAX'
+            ],
             repetitions=25,
             shuffle=True
         )
@@ -92,7 +99,7 @@ class RunnerConfig:
         solution = context.run_variation['solution']
         problem = context.run_variation['problem']
 
-        profiler_cmd = f'ssh {config.USERNAME}@{config.IP} "sudo -s energibridge \
+        profiler_cmd = f'ssh {config.USERNAME}@{config.IP} "sudo -n energibridge \
                         --interval 200 \
                         --max-execution 0 \
                         --output {config.REMOTE_DIR}/llm-code-experiments/energibridge.csv \

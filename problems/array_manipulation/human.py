@@ -32,7 +32,7 @@ def arrayManipulation(n, queries):
 
 if __name__ == '__main__':
     # Path to the input file
-    input_file_path = "../../input/array_manipulation.txt"  # Update with your own file path
+    input_file_path = "/home/roy/Projects/greenlab/experiment-runner/input/array_manipulation.txt"  # Update with your own file path
     
     # Read the input file
     with open(input_file_path, 'r') as file:
@@ -48,9 +48,9 @@ if __name__ == '__main__':
 
     # Call the function to perform the array manipulation
     result = arrayManipulation(n, queries)
-    
-    # Write the result to the output file
-    output_file_path = "arrayManipulation/output/output.txt"  # Path to the output file
-    with open(output_file_path, 'w') as fptr:
-        fptr.write(str(result) + '\n')
-        fptr.close()
+    #
+    # # Write the result to the output file
+    # output_file_path = "arrayManipulation/output/output.txt"  # Path to the output file
+    # with open(output_file_path, 'w') as fptr:
+    #     fptr.write(str(result) + '\n')
+    #     fptr.close()

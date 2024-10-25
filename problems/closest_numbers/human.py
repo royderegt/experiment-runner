@@ -3,7 +3,7 @@
 def main():
    #N = int(input())
     #ar = sorted(list(map(int, str(input()).split())))
-    input_file_path = "closestNumber/input/input.txt"  # Path to your input file
+    input_file_path = "/home/roy/Projects/greenlab/experiment-runner/input/closest_number.txt"  # Path to your input file
     
     with open(input_file_path, 'r') as file:
         # Read all lines from the input file
@@ -24,11 +24,11 @@ def main():
     return prs
 
 if __name__ == '__main__':
-    output_file_path = "../../input/closest_number.txt"  # path
-    fptr = open(output_file_path, 'w')
+    # output_file_path = "/home/roy/Projects/greenlab/experiment-runner/input/closest_number.txt"  # path
+    # fptr = open(output_file_path, 'w')
     result = main()
     #fptr.write(' '.join(map(str, result)))
-    fptr.write(result)
-    fptr.write('\n')
-    fptr.close()
+    # fptr.write(result)
+    # fptr.write('\n')
+    # fptr.close()
 

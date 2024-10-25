@@ -29,7 +29,7 @@ def hourglassSum(board):
     return max_sum
 
 if __name__ == '__main__':
-    input_file_path = "../../input/2d_array.txt"  # input file path
+    input_file_path = "/home/roy/Projects/greenlab/experiment-runner/input/2d_array.txt"  # input file path
     # output_file_path = "2D_Array/output/large_output.txt"  # Path for the output file
 
     # Read the input file and construct the matrix

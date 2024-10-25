@@ -37,7 +37,7 @@ def find_median(ls):
     return t_res
 
 if __name__ == "__main__":
-    with open('../../input/median_array.txt', 'r') as file:
+    with open('/home/roy/Projects/greenlab/experiment-runner/input/median_array.txt', 'r') as file:
         n = int(file.readline().strip())  
         numbers = [int(file.readline().strip()) for _ in range(n)]  
 

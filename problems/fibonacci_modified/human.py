@@ -25,9 +25,7 @@ def fibonacciModified(t1, t2, n):
     return b
 
 if __name__ == '__main__':
-    output_file_path = "../../input/fibonacci.txt"  # path
-    fptr = open(output_file_path, 'w')
-    result = fibonacciModified(0, 1, 10)
-    fptr.write(str(result) + '\n')
-    fptr.close()
-   #print(f"Output saved to {output_file_path}")
+    with open('/home/roy/Projects/greenlab/experiment-runner/input/fibonacci.txt', 'r') as file:
+        t1, t2, n = map(int, file.readline().split())
+
+    result = fibonacciModified(t1, t2, n)

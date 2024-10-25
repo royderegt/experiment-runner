@@ -31,7 +31,7 @@ def closestNumbers(arr):
     return result
 
 if __name__ == "__main__":
-    with open('../../input/closest_number.txt', 'r') as file:
+    with open('/home/roy/Projects/greenlab/experiment-runner/input/closest_number.txt', 'r') as file:
         n = int(file.readline().strip())
         
         arr = list(map(int, file.readline().strip().split()))

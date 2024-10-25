@@ -22,7 +22,7 @@ def arrayManipulation(n, queries):
     return max_val
 
 if __name__ == "__main__":
-    with open('../../input/array_manipulation.txt', 'r') as file:
+    with open('/home/roy/Projects/greenlab/experiment-runner/input/array_manipulation.txt', 'r') as file:
         n, m = map(int, file.readline().strip().split())
         
         queries = []
